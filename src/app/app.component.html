@@ -42,7 +42,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #ca49c4;
     color: white;
     font-weight: 600;
   }
@@ -304,13 +304,24 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <span>CV Iago Alonso</span>  
+  <img width="120"alt="Iago Alonso Logo" src="/assets/images/logoIago.png" />
+    <a routerLink="/sobreMi" style="padding-left: 15px; color: white; text-decoration: underline;">Sobre Mi</a>
+    <a routerLink="/habilidades" style="padding-left: 15px; color: white; text-decoration: underline;">Habilidades</a>
+    <a routerLink="/formacionAcademica" style="padding-left: 15px; color: white; text-decoration: underline;">Formación Académica</a>
+    <a routerLink="/formacionComplementaria" style="padding-left: 15px; color: white; text-decoration: underline;">Formación Complementaria</a>
+    <a routerLink="/experienciaProfesional" style=" padding-left: 15px;color: white; text-decoration: underline;">Experiencia Profesional</a>
+    <a routerLink="/otraInformacion" style="padding-left: 15px;color: white; text-decoration: underline;">Otra Información</a>
+    <a routerLink="/sobreMi" style=" padding-left: 15px; color: white; text-decoration: underline;">Volver a Inicio</a>
 </div>
+
+
 
 <div class="content" role="main">
 
-<h1>Página raíz</h1>
-
+<router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
+
+
+
+

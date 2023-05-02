@@ -13,11 +13,12 @@ import { SobreMiComponent } from './pages/sobre-mi/sobre-mi.component';
 import { BloqueExperienciaProfesionalComponent } from './components/bloque-experiencia-profesional/bloque-experiencia-profesional.component';
 import { BloqueFormacionAcademicaComponent } from './components/bloque-formacion-academica/bloque-formacion-academica.component';
 import { BloqueFormacionComplementariaComponent } from './components/bloque-formacion-complementaria/bloque-formacion-complementaria.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     ExperienciaProfesionalComponent,
     FormacionAcademicaComponent,
     FormacionComplementariaComponent,
@@ -27,6 +28,8 @@ import { BloqueFormacionComplementariaComponent } from './components/bloque-form
     BloqueExperienciaProfesionalComponent,
     BloqueFormacionAcademicaComponent,
     BloqueFormacionComplementariaComponent,
+    NotFoundComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
