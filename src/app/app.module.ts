@@ -10,11 +10,21 @@ import { FormacionComplementariaComponent } from './pages/formacion-complementar
 import { HabilidadesComponent } from './pages/habilidades/habilidades.component';
 import { OtraInformacionComponent } from './pages/otra-informacion/otra-informacion.component';
 import { SobreMiComponent } from './pages/sobre-mi/sobre-mi.component';
-import { BloqueExperienciaProfesionalComponent } from './components/bloque-experiencia-profesional/bloque-experiencia-profesional.component';
-import { BloqueFormacionAcademicaComponent } from './components/bloque-formacion-academica/bloque-formacion-academica.component';
-import { BloqueFormacionComplementariaComponent } from './components/bloque-formacion-complementaria/bloque-formacion-complementaria.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { NavegadorComponent } from './components/navegador/navegador.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,15 +35,23 @@ import { FooterComponent } from './components/footer/footer.component';
     HabilidadesComponent,
     OtraInformacionComponent,
     SobreMiComponent,
-    BloqueExperienciaProfesionalComponent,
-    BloqueFormacionAcademicaComponent,
-    BloqueFormacionComplementariaComponent,
     NotFoundComponent,
+    NavegadorComponent,
     FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

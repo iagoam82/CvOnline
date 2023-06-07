@@ -1,4 +1,62 @@
-<h1>Sobre mi</h1>
-   
-    
-<button (click)="volverAInicio">Volver a Inicio</button>
+<div class="margen-total">
+    <!-- FILA DE ARRIBA -->
+    <mat-grid-list [cols]="4" rowHeight="80px" >
+        <mat-grid-tile [colspan]="1" [rowspan]="4" style="background-color: rgb(184, 230, 147);">
+            <img class="redondo" src="./assets/images/fotoIagoTrans2.png" alt="Foto de Iago Alonso" width="130px"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="4" style="background-color: rgb(196, 196, 149);">
+            <div class="texto-centrado margen-total">
+                <h1>{{nombre}}</h1>
+                <p>{{profesion}}</p>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="4" style="background-color: rgb(241, 241, 104);">
+            <div class="texto-centrado margen-total">
+                <h1>Sobre mi</h1>
+                <p> {{sobreMi1}}</p>
+                <p> {{sobreMi2}}</p>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <!-- FILA DE ABAJO -->
+    <mat-grid-list [cols]="5" rowHeight="100px" >
+        <mat-grid-tile [colspan]="1" [rowspan]="4" style="background-color: rgb(216, 147, 230);">
+            <div class="texto-centrado margen-total">
+               <h1>Idiomas</h1>
+               <p>Español</p>
+               <p>Gallego</p>
+               <p>Inglés</p>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="4" style="background-color: rgb(141, 72, 81);">
+            <div class="texto-centrado margen-total">
+                <h1>Habilidades técnicas</h1>
+                <p>Java</p>
+                <p>SQL</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>PHP</p>
+                <p>Angular</p>
+                <p>Bootstrap</p>
+                <p>GitHub</p>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="4" style="background-color: rgb(128, 90, 90);">
+            <div class="texto-centrado margen-total">
+                <h1>Habilidades personales</h1>
+               <p>Comunicación</p>
+               <p>Adaptabilidad</p>
+               <p>Responsabilidad</p>
+               <p>Compromiso</p>
+               <p>Actitud positiva</p>
+               <p>Trabajo en equipo</p>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
