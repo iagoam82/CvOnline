@@ -1,23 +1,9 @@
 <div class="margen-total" style="background-color: rgb(226, 226, 211);">
-    <mat-grid-list [cols]="1" rowHeight="80px" style="text-align: center;">
-        <h1>Experiencia profesional</h1>
+    <mat-grid-list [cols]="3" rowHeight="80px">
+        <!-- Columna 1 -->
         <mat-grid-tile [colspan]="1" [rowspan]="6">
-            
-            <div style="display: flex;">
-                
-                <mat-card class="example-card">
-                    <mat-card-header>
-                        <mat-card-title-group>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle style="color: black;">Medium</mat-card-subtitle>
-                            <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                                alt="Image of a Shiba Inu">
-                        </mat-card-title-group>
-                    </mat-card-header>
-                    <mat-card-content>
-                        {{longText}}
-                    </mat-card-content>
-                </mat-card>
+            <div style="text-align: center;">
+                <h1>FORMACIÓN ACADÉMICA</h1>
                 <mat-card class="example-card">
                     <mat-card-header>
                         <mat-card-title-group>
@@ -33,3 +19,41 @@
                 </mat-card>
             </div>
         </mat-grid-tile>
+
+        <!-- Columna 2 -->
+        <mat-grid-tile [colspan]="1" [rowspan]="6">
+        </mat-grid-tile>
+
+        <!-- Columna 3 -->
+        <mat-grid-tile [colspan]="1" [rowspan]="6">
+            <div style="text-align: center;">
+                <h1>FORMACIÓN COMPLEMENTARIA</h1>
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title-group>
+                            <mat-card-title>Shiba Inu</mat-card-title>
+                            <mat-card-subtitle style="color: black;">Medium</mat-card-subtitle>
+                            <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                alt="Image of a Shiba Inu">
+                        </mat-card-title-group>
+                    </mat-card-header>
+                    <mat-card-content>
+                        {{longText}}
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- -->
+</div>

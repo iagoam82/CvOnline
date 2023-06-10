@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SobreMiComponent } from './pages/sobre-mi/sobre-mi.component';
-import { FormacionAcademicaComponent } from './pages/formacion-academica/formacion-academica.component';
+import { FormacionComponent } from './pages/formacion/formacion.component';
 import { ExperienciaProfesionalComponent } from './pages/experiencia-profesional/experiencia-profesional.component';
-import { FormacionComplementariaComponent } from './pages/formacion-complementaria/formacion-complementaria.component';
 import { OtraInformacionComponent } from './pages/otra-informacion/otra-informacion.component';
-import { HabilidadesComponent } from './pages/habilidades/habilidades.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
@@ -18,21 +16,13 @@ const routes: Routes = [
   path:'sobreMi',
   component:SobreMiComponent
 },
-{//Ruta para habilidades
-  path:'habilidades',
-  component:HabilidadesComponent
-},
-{//Ruta para Formación Académica
-  path:'formacionAcademica',
-  component:FormacionAcademicaComponent
+{//Ruta para Formación
+  path:'formacion',
+  component:FormacionComponent
 },
 {//Ruta para Experiencia Profesional
   path:'experienciaProfesional',
   component:ExperienciaProfesionalComponent
-},
-{//Ruta para Formación Complementaria
-  path:'formacionComplementaria',
-  component:FormacionComplementariaComponent
 },
 {//Ruta para Otra Información
   path:'otraInformacion',
