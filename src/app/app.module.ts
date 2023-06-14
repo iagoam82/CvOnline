@@ -10,23 +10,32 @@ import { FormacionComponent } from './pages/formacion/formacion.component';
 import { OtraInformacionComponent } from './pages/otra-informacion/otra-informacion.component';
 import { SobreMiComponent } from './pages/sobre-mi/sobre-mi.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { NavegadorComponent } from './components/navegador/navegador.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+//MATERIAL
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-
     ExperienciaProfesionalComponent,
     FormacionComponent,
     OtraInformacionComponent,
     SobreMiComponent,
     NotFoundComponent,
-    NavegadorComponent,
     FooterComponent,
+    NavBarComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +43,13 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatGridListModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    LayoutModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
