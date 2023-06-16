@@ -8,7 +8,12 @@ export const PERSONAS: Persona [] =[
         foto: 'assets/images/fotoiago.png',
         nombre: 'Iago Alonso',
         profesion: 'Desarrollador web',
-        descripcion: 'Soy un desarrollador de software con 5 años de experiencia en el desarrollo de aplicaciones web y móviles. Me gusta trabajar en equipo y aprender nuevas tecnologías.',
+        descripcion: 'Soy una persona organizada y responsable, con ganas de seguir'+
+        'aprendiendo y desarrollándome. Me adapto con facilidad a los cambios,'+
+        'buscando la mejora y el crecimiento tanto personal, como profesionalmente'+
+        'Tras casi 20 años trabajando en hostelería he reorientado mi futuro'+
+        'profesional hacia la informática. Actualmente busco un empleo que me permita seguir'+
+        'adquiriendo conocimientos con el fin de crecer dentro de la empresa según sus necesidades.',
         idiomas: IDIOMAS,
         tecnologias: TECNOLOGIAS,
         personalidad: CARACTERISTICAS

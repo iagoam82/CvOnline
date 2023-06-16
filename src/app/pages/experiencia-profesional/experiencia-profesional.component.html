@@ -1,9 +1,9 @@
 <div class="margen-total" style="background-color: rgb(226, 226, 211);color: black;">
-    <mat-grid-list [cols]="1" rowHeight="80px" style="text-align: center;">
+    <mat-grid-list [cols]="1" autoHeight=true style="text-align: center;">
         <h1>Experiencia profesional</h1>
-        <mat-grid-tile [colspan]="1" [rowspan]="6">
+        <mat-grid-tile  >
             
-            <div style="display: flex;">
+            <div >
                 <div *ngFor="let experiencia of listaExperienciaProfesional">
                     <mat-card class="example-card">
                         <mat-card-header>
