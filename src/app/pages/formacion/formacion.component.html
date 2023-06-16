@@ -1,121 +1,43 @@
 <div class="margen-total" style="background-color: rgb(226, 226, 211);color: black;">
-    <mat-grid-list cols="2" rowHeight="2:7" style="background-color: blueviolet;">
-        <!-- Columna 1 -->
-        <mat-grid-tile >
+    <mat-grid-list cols="2" rowHeight="2:3" >
+        <!-- Columna Formación Académica -->
+        <mat-grid-tile>
             <div style="text-align: center;">
                 <h1>FORMACIÓN ACADÉMICA</h1>
-                <!-- Programador1 -->
-                <mat-card class="example-card">
-                    <mat-card-header>
-                        <mat-card-title-group>
-                            <div style="display: flex;">
-                                <div>
-                                    <mat-card-title>{{titulo1}}</mat-card-title>
-                                    <mat-card-subtitle style="color: black;">{{centro1}}</mat-card-subtitle>
-                                    <mat-card-subtitle style="color: black;">{{fecha1}}</mat-card-subtitle>
-                                </div>
-                                <div>
-                                    <img style="border: 1px solid black;" mat-card-md-image src={{imagen1}}
-                                        alt="Logo IES Fernando Wirtz">
-                                </div>
-                            </div>
-                        </mat-card-title-group>
-                    </mat-card-header>
-
-                    <mat-card-content>{{descripcion1}} </mat-card-content>
-                </mat-card>
-                <!-- Programador2 -->
-                <mat-card class="example-card">
-                    <mat-card-header>
-                        <mat-card-title-group>
-                            <div style="display: flex;">
-                                <div>
-                                    <mat-card-title>{{titulo1}}</mat-card-title>
-                                    <mat-card-subtitle style="color: black;">{{centro1}}</mat-card-subtitle>
-                                    <mat-card-subtitle style="color: black;">{{fecha1}}</mat-card-subtitle>
-                                </div>
-                                <div>
-                                    <img style="border: 1px solid black;" mat-card-md-image src={{imagen1}}
-                                        alt="Logo IES Fernando Wirtz">
-                                </div>
-                            </div>
-                        </mat-card-title-group>
-                    </mat-card-header>
-
-                    <mat-card-content>{{descripcion1}} </mat-card-content>
-                </mat-card>
-                <!-- Programador3 -->
-                <mat-card class="example-card">
-                    <mat-card-header>
-                        <mat-card-title-group>
-                            <div style="display: flex;">
-                                <div>
-                                    <mat-card-title>{{titulo1}}</mat-card-title>
-                                    <mat-card-subtitle style="color: black;">{{centro1}}</mat-card-subtitle>
-                                    <mat-card-subtitle style="color: black;">{{fecha1}}</mat-card-subtitle>
-                                </div>
-                                <div>
-                                    <img style="border: 1px solid black;" mat-card-md-image src={{imagen1}}
-                                        alt="Logo IES Fernando Wirtz">
-                                </div>
-                            </div>
-                        </mat-card-title-group>
-                    </mat-card-header>
-
-                    <mat-card-content>{{descripcion1}} </mat-card-content>
-                </mat-card>
-                <!-- Programador4 -->
-                <mat-card class="example-card">
-                    <mat-card-header>
-                        <mat-card-title-group>
-                            <div style="display: flex;">
-                                <div>
-                                    <mat-card-title>{{titulo1}}</mat-card-title>
-                                    <mat-card-subtitle style="color: black;">{{centro1}}</mat-card-subtitle>
-                                    <mat-card-subtitle style="color: black;">{{fecha1}}</mat-card-subtitle>
-                                </div>
-                                <div>
-                                    <img style="border: 1px solid black;" mat-card-md-image src={{imagen1}}
-                                        alt="Logo IES Fernando Wirtz">
-                                </div>
-                            </div>
-                        </mat-card-title-group>
-                    </mat-card-header>
-
-                    <mat-card-content>{{descripcion1}} </mat-card-content>
-                </mat-card>
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <!-- Tarjetas Formación Académica -->
+                <div *ngFor="let formacion of listaFormacionAcademica">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <mat-card-title-group>
+                                <mat-card-title>{{formacion.titulo}}</mat-card-title>
+                                <mat-card-subtitle style="color: black;">{{formacion.centro}}</mat-card-subtitle>
+                                <mat-card-subtitle style="color: black;">{{formacion.fecha}}</mat-card-subtitle>
+                                <img mat-card-md-image src={{formacion.imagen}} alt="Logotipo entidad formadora">
+                            </mat-card-title-group>
+                        </mat-card-header>
+                        <mat-card-content>{{formacion.descripcion}}</mat-card-content>
+                    </mat-card>
+                </div>
             </div>
         </mat-grid-tile>
-        <!-- Columna 2 -->
+        <!-- Columna Formación Complementaria -->
         <mat-grid-tile>
             <div style="text-align: center;">
                 <h1>FORMACIÓN COMPLEMENTARIA</h1>
-                <mat-card class="example-card">
-                    <mat-card-header>
-                        <mat-card-title-group>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle style="color: black;">Medium</mat-card-subtitle>
-                            <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                                alt="Image of a Shiba Inu">
-                        </mat-card-title-group>
-                    </mat-card-header>
-                    <mat-card-content>
-
-                    </mat-card-content>
-                </mat-card>
+                <div *ngFor="let formacion of listaFormacionComplementaria">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <mat-card-title-group>
+                                <mat-card-title>{{formacion.titulo}}</mat-card-title>
+                                <mat-card-subtitle style="color: black;">{{formacion.centro}}</mat-card-subtitle>
+                                <mat-card-subtitle style="color: black;">{{formacion.fecha}}</mat-card-subtitle>
+                                <mat-card-subtitle style="color: black;">Horas: {{formacion.horas}}</mat-card-subtitle>
+                                <img mat-card-md-image src={{formacion.imagen}} alt="Logotipo entidad formadora">
+                            </mat-card-title-group>
+                        </mat-card-header>
+                        <mat-card-content>{{formacion.descripcion}}</mat-card-content>
+                    </mat-card>
+                </div>
             </div>
         </mat-grid-tile>
     </mat-grid-list>

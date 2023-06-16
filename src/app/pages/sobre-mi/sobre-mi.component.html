@@ -1,62 +1,58 @@
 <div class="margen-total" style="color:black;">
     <!-- FILA DE ARRIBA -->
     <mat-grid-list [cols]="4" rowHeight="80px" >
-        <!-- Columna 1 -->
+        <!-- Columna Foto -->
         <mat-grid-tile [colspan]="1" [rowspan]="4" style="background-color:rgb(226, 226, 211);">
-            <img class="redondo" src="./assets/images/user.png" alt="Foto de Iago Alonso" width="130px"/>
+            <div *ngFor="let persona of listaPersonas">
+                <img class="redondo" src={{persona.foto}} alt="Foto de Iago Alonso" width="130px"/>
+            </div>
+        
         </mat-grid-tile>
-        <!-- Columna 2 -->
+        <!-- Columna Nombre y profesión -->
         <mat-grid-tile [colspan]="1" [rowspan]="4" style="background-color: rgb(226, 226, 211);">
-            <div class="texto-centrado margen-total">
-                <h1>{{nombre}}</h1>
-                <p>{{profesion}}</p>
+            <div *ngFor="let persona of listaPersonas" class="texto-centrado margen-total">
+                <h1>{{persona.nombre}}</h1>
+                <p>{{persona.profesion}}</p>
             </div>
         </mat-grid-tile>
-        <!-- Columna 3 -->
+        <!-- Columna Sobre Mi -->
         <mat-grid-tile [colspan]="2" [rowspan]="4" style="background-color: rgb(226, 226, 211);">
-            <div class="texto-centrado margen-total">
+            <div *ngFor="let persona of listaPersonas" class="texto-centrado margen-total">
                 <h1>Sobre mi</h1>
-                <p> {{sobreMi1}}</p>
-                <p> {{sobreMi2}}</p>
+                <p> {{persona.descripcion}}</p>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
     <!-- FILA DE ABAJO -->
     <mat-grid-list [cols]="5" rowHeight="100px" >
-        <!-- Columna 1 -->
+        <!-- Columna idiomas -->
         <mat-grid-tile [colspan]="1" [rowspan]="4" style="background-color: rgb(226, 226, 211);">
             <div class="texto-centrado margen-total">
                <h1>Idiomas</h1>
-               <p>Español</p>
-               <p>Gallego</p>
-               <p>Inglés</p>
+               <div *ngFor="let idioma of listaIdiomas">
+                   <p>{{idioma.nombre}} - {{idioma.nivel}}</p>
+               </div>
             </div>
         </mat-grid-tile>
-        <!-- Columna 2 -->
+        <!-- Columna Tecnologías -->
         <mat-grid-tile [colspan]="2" [rowspan]="4" style="background-color: rgb(226, 226, 211);">
             <div class="texto-centrado margen-total">
-                <h1>Habilidades técnicas</h1>
-                <p>Java</p>
-                <p>SQL</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>JavaScript</p>
-                <p>PHP</p>
-                <p>Angular</p>
-                <p>Bootstrap</p>
-                <p>GitHub</p>
+                <h1>Tecnologías</h1>
+
+                <div *ngFor="let tecnologia of listaTecnologias">
+                    <p>{{tecnologia.nombre}} - {{tecnologia.nivel}}/12</p>
+                </div>
+
             </div>
         </mat-grid-tile>
-        <!-- Columna 3 -->
+        <!-- Columna personalidad -->
         <mat-grid-tile [colspan]="2" [rowspan]="4" style="background-color: rgb(226, 226, 211);">
             <div class="texto-centrado margen-total">
-                <h1>Habilidades personales</h1>
-                <p>Comunicación</p>
-                <p>Adaptabilidad</p>
-                <p>Responsabilidad</p>
-                <p>Compromiso</p>
-                <p>Actitud positiva</p>
-                <p>Trabajo en equipo</p>
+                <h1>Personalidad</h1>
+
+                <div *ngFor="let personalidad of listaCaracteristicas">
+                    <p>{{personalidad.nombre}} - {{personalidad.nivel}}/10</p>
+                </div>
             </div>
         </mat-grid-tile>
     </mat-grid-list>

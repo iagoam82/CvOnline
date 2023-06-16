@@ -1,25 +1,36 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Persona } from './persona/models/persona.interface';
+import { PersonaService } from './persona/services/persona.service';
+import { IdiomaService } from './idioma/services/idioma.service';
+import { Idioma } from './idioma/models/idioma.interface';
+import { TecnologiaService } from './tecnologia/services/tecnologia.service';
+import { Tecnologia } from './tecnologia/models/tecnologia.interface';
+import { CaracteristicaService } from './caracteristica/services/caracteristica.service';
+import { Caracteristica } from './caracteristica/models/caracteristica.interface';
 
 @Component({
   selector: 'app-sobre-mi',
   templateUrl: './sobre-mi.component.html',
   styleUrls: ['./sobre-mi.component.scss'],
-  
 })
-export class SobreMiComponent {
+export class SobreMiComponent implements OnInit {
 
-  nombre: string='Iago Alonso Meijide';
-  profesion: string='Desarrollador web full stack';
-  sobreMi1: string="Soy una persona organizada y responsable, con ganas de seguir aprendiendo y desarrollándome."+
-  "Me adapto con facilidad a los cambios, buscando la mejora y el crecimiento tanto personal como profesionalmente";
-  sobreMi2: string="Tras casi 20 años trabajando en hostelería he reorientado mi futuro profesional hacia la informática."+
-  "Actualmente busco un empleo que me permita seguir adquiriendo conocimientos con el fin"+
-  "de crecer dentro de la empresa según sus necesidades.";
+  listaPersonas: Persona[]=[];
+  listaIdiomas: Idioma[]=[];
+  listaTecnologias: Tecnologia[]=[];
+  listaCaracteristicas: Caracteristica[]=[];
 
-  constructor(private router:Router){}
+  constructor(
+    private personaService: PersonaService,
+    private idiomaService: IdiomaService,
+    private tecnologiaService: TecnologiaService,
+    private caracteristicaService: CaracteristicaService,
+  ){}
 
-  volverAInicio(): void{
-    this.router.navigate(['/sobreMi'])
+  ngOnInit(): void {
+    this.listaPersonas = this.personaService.obtenerPersonas();
+    this.listaIdiomas = this.idiomaService.obtenerIdiomas();
+    this.listaTecnologias = this.tecnologiaService.obtenerTecnologias();
+    this.listaCaracteristicas = this.caracteristicaService.obtenerCaracteristicas();
   }
 }

@@ -1,19 +1,22 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ExperienciaProfesionalService } from './services/experiencia-profesional.service';
+import { ExperienciaProfesional } from './models/experienciaProfesional.interface';
 
 @Component({
   selector: 'app-experiencia-profesional',
   templateUrl: './experiencia-profesional.component.html',
   styleUrls: ['./experiencia-profesional.component.scss']
 })
-export class ExperienciaProfesionalComponent {
+export class ExperienciaProfesionalComponent implements OnInit{
 
-  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-  originally bred for hunting.`;
-  constructor(private router:Router){}
+  listaExperienciaProfesional: ExperienciaProfesional[]=[];
 
-  volverAInicio(){
-    this.router.navigate(['sobreMi'])
+  constructor(private experienciaProfesionalService: ExperienciaProfesionalService){}
+
+  ngOnInit(): void {
+    this.listaExperienciaProfesional = this.experienciaProfesionalService.obtenerExperienciaProfesional()
+    .sort((a: ExperienciaProfesional, b: ExperienciaProfesional) => b.id - a.id);
   }
+  
+  
 }
