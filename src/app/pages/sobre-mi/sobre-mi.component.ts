@@ -8,6 +8,7 @@ import { Tecnologia } from './tecnologia/models/tecnologia.interface';
 import { CaracteristicaService } from './caracteristica/services/caracteristica.service';
 import { Caracteristica } from './caracteristica/models/caracteristica.interface';
 
+
 @Component({
   selector: 'app-sobre-mi',
   templateUrl: './sobre-mi.component.html',
@@ -15,11 +16,14 @@ import { Caracteristica } from './caracteristica/models/caracteristica.interface
 })
 export class SobreMiComponent implements OnInit {
 
+  displayedColumns: string[] = ['imagen', 'nivel'];
+  displayedColumnsCaracteristicas: string[] = ['imagen','nombre', 'nivel'];
   listaPersonas: Persona[]=[];
   listaIdiomas: Idioma[]=[];
   listaTecnologias: Tecnologia[]=[];
   listaCaracteristicas: Caracteristica[]=[];
 
+  sesion: boolean = false;
   constructor(
     private personaService: PersonaService,
     private idiomaService: IdiomaService,
@@ -32,5 +36,21 @@ export class SobreMiComponent implements OnInit {
     this.listaIdiomas = this.idiomaService.obtenerIdiomas();
     this.listaTecnologias = this.tecnologiaService.obtenerTecnologias();
     this.listaCaracteristicas = this.caracteristicaService.obtenerCaracteristicas();
+
+  
+
+    if(!sessionStorage.getItem('token')){
+      alert('Esta página está en desarrollo, se puede visualizar el contenido y '+
+      'la información pero faltan los trabajos de diseño para que la visualización sea atractiva'+
+      'Por favor, clicka en el botón de aceptar para continuar');
+
+    
+
+
+
+      sessionStorage.setItem('token','abc123')
+    }
   }
+  
 }
+

@@ -7,7 +7,7 @@ export const FORMACION_ACADEMICA: FormacionAcademica[] = [
         titulo:'Técnico Superior en Desarrollo de Aplicaciones Web',
         centro: 'IES Fernando Wirtz',
         fecha: 'Septiembre/2019 - Diciembre/2022',
-        descripcion: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        descripcion: 'Módulos: Desarrollo web en entorno cliente, Desarrollo web en entorno servidor, Despliegue de aplicaciones web, Diseño de interfaces web, Diseño web, Empresa e iniciativa emprendedora, Formación y orientación laboral, Inglés técnico para grado superior, Lenguajes de marcas y sistemas de gestión de información, Proyecto de desarrollo de aplicaciones web, Sistemas de gestión empresarial, Formación en centros de trabajo',
         imagen: '/assets/images/wirtz.jpg'
     },
     {
@@ -15,7 +15,7 @@ export const FORMACION_ACADEMICA: FormacionAcademica[] = [
         titulo:'Técnico en servicios de restaurante y bar',
         centro: 'IES Paseo das Pontes',
         fecha: 'Septiembre/2001 - Junio/2003',
-        descripcion: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        descripcion: 'Módulos: Ofertas gastronómicas y sistemas de aprovisionamiento, Técnicas elementales de cocina, Servicios en bar-cafetería, Servicios en restaurante, Seguridad e higiene en la manipulación de alimentos, Formación y orientación laboral, Empresa e iniciativa emprendedora, Inglés técnico para grado medio, Proyecto de servicio de restaurante y bar, Formación en centros de trabajo',
         imagen: '/assets/images/paseodaspontes.JPG'
     },
     {
@@ -23,7 +23,7 @@ export const FORMACION_ACADEMICA: FormacionAcademica[] = [
         titulo:'Educación Secundaria Obligatoria',
         centro: 'IES Salvador de Madariaga',
         fecha: 'Septiembre/1996 - Junio/2000',
-        descripcion: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+        descripcion: 'Conocimientos globales básicos',
         imagen: '/assets/images/salvadordemadariaga.JPG'
     }
 ]

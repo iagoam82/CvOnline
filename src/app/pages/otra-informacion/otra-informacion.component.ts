@@ -1,19 +1,20 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-otra-informacion',
   templateUrl: './otra-informacion.component.html',
   styleUrls: ['./otra-informacion.component.scss']
 })
-export class OtraInformacionComponent {
+export class OtraInformacionComponent implements OnInit{
 
-  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-  originally bred for hunting.`;
-  constructor(private router:Router){}
+   
+  
+  constructor(){}
 
-  volverAInicio(){
-    this.router.navigate(['/sobreMi'])
+
+  ngOnInit(): void {
+
   }
+
+  
 }

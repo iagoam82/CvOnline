@@ -1,4 +1,5 @@
 export interface Tecnologia{
+    imagen: string;
     nombre: string;
-    nivel: number;
+    nivel: string;
 }

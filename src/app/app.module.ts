@@ -23,7 +23,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
-import {CdkTableModule} from '@angular/cdk/table';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
 
 
 
@@ -52,7 +55,9 @@ import {CdkTableModule} from '@angular/cdk/table';
     MatIconModule,
     MatListModule,
     MatDividerModule,
-    CdkTableModule
+    MatTableModule,
+    MatDialogModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,39 +1,48 @@
 import { Tecnologia } from '../models/tecnologia.interface';
 export const TECNOLOGIAS: Tecnologia[] = [
     {
+        imagen: 'assets/images/tecnologias/java.png',
         nombre: 'Java',
-        nivel: 8
+        nivel: 'assets/images/porcentajes/80.jpg'
     },
     {
+        imagen: 'assets/images/tecnologias/sql.jpg',
         nombre: 'SQL',
-        nivel: 7
+        nivel: 'assets/images/porcentajes/70.jpg'
     },
     {
+        imagen: 'assets/images/tecnologias/html.png',
         nombre: 'HTML',
-        nivel: 7
+        nivel: 'assets/images/porcentajes/80.jpg'
     },
     {
+        imagen: 'assets/images/tecnologias/css.png',    
         nombre: 'CSS',
-        nivel: 7
+        nivel: 'assets/images/porcentajes/75.jpg'
     },
     {
+        imagen: 'assets/images/tecnologias/javascript.png',
         nombre: 'JavaScript',
-        nivel: 8
+        nivel: 'assets/images/porcentajes/80.jpg'
     },
     {
+        imagen: 'assets/images/tecnologias/php.png',
         nombre: 'PHP',
-        nivel: 6
+        nivel: 'assets/images/porcentajes/70.jpg'
     },
     {
+        imagen: 'assets/images/tecnologias/angular.png',
         nombre: 'Angular',
-        nivel: 7
+        nivel: 'assets/images/porcentajes/70.jpg'
     },
     {
+        imagen: 'assets/images/tecnologias/bootstrap.png',
         nombre: 'Bootstrap',
-        nivel: 7
+        nivel: 'assets/images/porcentajes/70.jpg'
     },
     {
+        imagen: 'assets/images/tecnologias/github.png',
         nombre: 'GitHub',
-        nivel: 6
+        nivel: 'assets/images/porcentajes/60.jpg'
     },
 ]

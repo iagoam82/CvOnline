@@ -13,4 +13,5 @@ export class TecnologiaService {
   obtenerTecnologias():Tecnologia[]{
     return TECNOLOGIAS;
   }
+  
 }
