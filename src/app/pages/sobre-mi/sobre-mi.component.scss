@@ -1,14 +1,29 @@
-.margen-total{
-    padding: 10px;
-    
+.margen{
+    padding: 2rem;
 }
-.redondo{
-    border-radius: 10px;
+.foto{
+    border-radius: 3rem;
+    width: 12rem;
 }
-.texto-centrado{
+.centrado{
     text-align: center;
 }
-
-table {
-    width: 100%;
+mat-card,table {
+    height: auto;
+    width: auto;
+    background-color: white;
+}
+td{
+    color: black;
+}
+mat-grid-list {
+    display: flex;
+    flex-wrap: wrap;
   }
+  
+  mat-grid-tile {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  

@@ -6,7 +6,7 @@ export const TECNOLOGIAS: Tecnologia[] = [
         nivel: 'assets/images/porcentajes/80.jpg'
     },
     {
-        imagen: 'assets/images/tecnologias/sql.jpg',
+        imagen: 'assets/images/tecnologias/sql.png',
         nombre: 'SQL',
         nivel: 'assets/images/porcentajes/70.jpg'
     },
