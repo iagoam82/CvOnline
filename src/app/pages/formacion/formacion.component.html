@@ -1,17 +1,16 @@
-<div class="margen-total" style="background-color: rgb(226, 226, 211);color: black;">
-    <mat-grid-list cols="2" rowHeight="2:3" >
+<mat-grid-list [cols]="colSize" rowHeight="70rem" >
         <!-- Columna Formación Académica -->
         <mat-grid-tile>
-            <div style="text-align: center;">
+            <div class="centrado">
                 <h1>FORMACIÓN ACADÉMICA</h1>
-                <!-- Tarjetas Formación Académica -->
+                <!-- Tarjetas Formación académica -->
                 <div *ngFor="let formacion of listaFormacionAcademica">
                     <mat-card class="example-card">
                         <mat-card-header>
                             <mat-card-title-group>
                                 <mat-card-title>{{formacion.titulo}}</mat-card-title>
-                                <mat-card-subtitle style="color: black;">{{formacion.centro}}</mat-card-subtitle>
-                                <mat-card-subtitle style="color: black;">{{formacion.fecha}}</mat-card-subtitle>
+                                <mat-card-subtitle>{{formacion.centro}}</mat-card-subtitle>
+                                <mat-card-subtitle>{{formacion.fecha}}</mat-card-subtitle>
                                 <img mat-card-md-image src={{formacion.imagen}} alt="Logotipo entidad formadora">
                             </mat-card-title-group>
                         </mat-card-header>
@@ -22,16 +21,17 @@
         </mat-grid-tile>
         <!-- Columna Formación Complementaria -->
         <mat-grid-tile>
-            <div style="text-align: center;">
+            <div class="centrado">
                 <h1>FORMACIÓN COMPLEMENTARIA</h1>
+                <!-- Tarjetas Formación complementaria -->
                 <div *ngFor="let formacion of listaFormacionComplementaria">
                     <mat-card class="example-card">
                         <mat-card-header>
                             <mat-card-title-group>
                                 <mat-card-title>{{formacion.titulo}}</mat-card-title>
-                                <mat-card-subtitle style="color: black;">{{formacion.centro}}</mat-card-subtitle>
-                                <mat-card-subtitle style="color: black;">{{formacion.fecha}}</mat-card-subtitle>
-                                <mat-card-subtitle style="color: black;">Horas: {{formacion.horas}}</mat-card-subtitle>
+                                <mat-card-subtitle>{{formacion.centro}}</mat-card-subtitle>
+                                <mat-card-subtitle>{{formacion.fecha}}</mat-card-subtitle>
+                                <mat-card-subtitle>Horas: {{formacion.horas}}</mat-card-subtitle>
                                 <img mat-card-md-image src={{formacion.imagen}} alt="Logotipo entidad formadora">
                             </mat-card-title-group>
                         </mat-card-header>
@@ -41,4 +41,3 @@
             </div>
         </mat-grid-tile>
     </mat-grid-list>
-</div>

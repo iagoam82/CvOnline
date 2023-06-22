@@ -1,5 +1,9 @@
-.margen-total{
-    padding: 10px;
+mat-grid-list{
+  color: black;
+  margin: 2rem;
+}
+mat-card-subtitle{
+  color: black;
 }
 .example-card {
     max-width: 600px;
@@ -11,5 +15,5 @@
     padding: 10px;
   }
   .centrado{
-    align-items: center;
-  }
+    text-align: center;
+}

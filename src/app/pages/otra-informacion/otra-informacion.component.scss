@@ -1,11 +1,23 @@
-.margen-total{
-    padding: 10px;
-    
+.example-card {
+  width: 25rem;
+  height: auto;
+  padding: 1rem;
+  margin: 2rem;
+  background-color: white;
 }
-  .example-card {
-    max-width: 400px;
-    margin: 8px;
-    background-color: white;
-  }
-  
-  
+mat-card-subtitle{
+  color: black;
+}
+mat-grid-list {
+  padding: 1rem;
+  color: black;
+}
+.titulo{
+  background-image: url('/assets/images/cruzroja.JPG');
+  background-size: cover;
+  border: 0.2rem solid black;
+}
+img{
+  height: 100%;
+  width: 100%;
+}

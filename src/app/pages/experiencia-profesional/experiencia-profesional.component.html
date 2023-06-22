@@ -1,25 +1,18 @@
-<div class="margen-total" style="background-color: rgb(226, 226, 211);color: black;">
-    <mat-grid-list [cols]="1" rowHeight="80px" style="text-align: center;">
-        <h1>Experiencia profesional</h1>
-        <mat-grid-tile [colspan]="1" [rowspan]="11">
-            <div>
-
-                <div *ngFor="let experiencia of listaExperienciaProfesional">
-                    <mat-card class="example-card">
-                        <mat-card-header>
-                            <mat-card-title-group>
-                                <mat-card-title>{{experiencia.puesto}}</mat-card-title>
-                                <mat-card-subtitle style="color: black;">{{experiencia.empresa}}</mat-card-subtitle>
-                                <mat-card-subtitle style="color: black;">{{experiencia.fecha}}</mat-card-subtitle>
-                                <img mat-card-md-image src={{experiencia.foto}}
-                                    alt="logotipo empresa">
-                            </mat-card-title-group>
-                        </mat-card-header>
-                        <mat-card-content>
-                            {{experiencia.descripcion}}
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-                
-            </div>
+<mat-grid-list [cols]="colSize" rowHeight="25rem">
+    <h1>Experiencia profesional</h1>
+    <div *ngFor="let experiencia of listaExperienciaProfesional">
+            <mat-grid-tile [colspan]="1">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>{{experiencia.puesto}}</mat-card-title>
+                        <mat-card-subtitle >{{experiencia.empresa}}</mat-card-subtitle>
+                        <mat-card-subtitle >{{experiencia.fecha}}</mat-card-subtitle>
+                        <img mat-card-md-image src={{experiencia.foto}} alt="logotipo empresa">
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>{{experiencia.descripcion}}</mat-card-content>
+            </mat-card>
         </mat-grid-tile>
+        </div>
+</mat-grid-list>

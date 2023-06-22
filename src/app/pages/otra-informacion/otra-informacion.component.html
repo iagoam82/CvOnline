@@ -1,26 +1,27 @@
-<div class="margen-total" style="background-color: rgb(226, 226, 211);color: black;">
-    <mat-grid-list [cols]="1" rowHeight="80px" style="text-align: center;">
-        <h1>Otra información</h1>
-        <mat-grid-tile [colspan]="1" [rowspan]="8">
-            <div style="display: flex;">
+<mat-grid-list [cols]="colSize" rowHeight="55rem" style="text-align: center;">
+  <h1>Otra información</h1>
+  <mat-grid-tile [colspan]="1">
 
-                <mat-card class="example-card">
-                    <mat-card-header>
-                      <div mat-card-avatar style="background-image: url('/assets/images/cruzroja.JPG');background-size: cover;border: 2px solid black;"></div>
-                      <mat-card-title>Cruz Roja</mat-card-title>
-                      <mat-card-subtitle style="color: black;">Voluntario</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image height="300px" width="100%" src="/assets/images/grupo.jpg" alt="Grupo de cruz roja">
-                    <mat-card-content style="padding-top: 10px;">
-                      <p>
-                        He impartido como voluntario un curso dirigido a personas mayores de 65 años sobre el uso y la forma de aplicar las nuevas tecnologías. 
-                      </p>
-                      <p>
-                        Ha sido una experiencia muy gratificante y enriquecedora, ya que todos los participantes han tenido una actitud inmejorable, haciéndome sentir muy
-                        cómodo y valorado.
-                      </p>
-                    </mat-card-content>
-                  </mat-card>
+      <!-- Cruz Roja -->
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="titulo"></div>
+          <mat-card-title>Cruz Roja</mat-card-title>
+          <mat-card-subtitle>Voluntario</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="/assets/images/grupo.jpg" alt="Grupo de cruz roja">
+        <mat-card-content style="padding-top: 10px;">
+          <p>
+            He impartido como voluntario un curso dirigido a personas mayores de 65 años
+            sobre el uso y la forma de aplicar las nuevas tecnologías.
+          </p>
+          <p>
+            Ha sido una experiencia muy gratificante y enriquecedora
+            ya que todos los participantes han tenido una actitud inmejorable,
+            haciéndome sentir muy cómodo y valorado.
+          </p>
+        </mat-card-content>
+      </mat-card>
 
-            </div>
-        </mat-grid-tile>
+  </mat-grid-tile>
+</mat-grid-list>
