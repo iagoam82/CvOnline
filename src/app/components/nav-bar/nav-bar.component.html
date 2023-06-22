@@ -6,12 +6,36 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar style="padding-top: 30px;"><img width="150px" src="assets/images/logoIago.png"></mat-toolbar>
     <mat-nav-list style="padding-top: 110px;">
-      <a mat-list-item [routerLink]="['/']">Sobre mi</a>
+      <div class="flexYcenter espacioizq">
+        <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
+        <a mat-list-item [routerLink]="['/']">Sobre mi</a>
+    </div>
+    <div class="flexYcenter espacioizq">
+      <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="school"></mat-icon>
       <a mat-list-item [routerLink]="['/dashboard/formacion']">Formación</a>
-      <a mat-list-item [routerLink]="['/dashboard/experienciaProfesional']">Experiencia profesional</a>
-      <a mat-list-item [routerLink]="['/dashboard/otraInformacion']">Otra información</a>
+      </div>
+      <div class="flexYcenter espacioizq">
+        <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="work"></mat-icon>
+        <a mat-list-item [routerLink]="['/dashboard/experienciaProfesional']">Experiencia</a>
+      </div>
+      <div class="flexYcenter espacioizq">
+        <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="info"></mat-icon>
+        <a mat-list-item [routerLink]="['/dashboard/otraInformacion']">Otra información</a>
+      </div>
     </mat-nav-list>
+    <div class="rrss">
+      <div>
+        <img src="/assets/images/rrss/qr.png" class="qr"/>
+      </div>
+      <div class="lineal">
+        <a href="https://www.linkedin.com/in/iagoiam/"><img width="50rem"  src="/assets/images/rrss/linkedin.png"/></a>
+        <a href="https://github.com/iagoam82"><img width="70rem" src="/assets/images/rrss/github.png"/></a>
+      </div>
+
+    </div>
   </mat-sidenav>
+ 
+
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="navBar-color">
       <button
@@ -22,7 +46,33 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Currículum web de IAGO ALONSO</span>
+
+      <div class="contenido-navegador">
+
+        <div><!-- teléfono y email -->
+          <div class="flexYcenter">
+            <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="phone_iphone"></mat-icon>
+            <span>673.549.799</span>
+          </div>
+          <div class="flexYcenter">
+            <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="mail"></mat-icon>
+            <a href="mailto:iagoiam82@gmail.com" style="color: white;"> iagoiam82@gmail.com</a>
+          </div>
+        </div>
+
+        <div><!--titulo-->
+            <h1>IAGO ALONSO MEIJIDE</h1>
+        </div>
+
+        <div>
+          <div class="flexYcenter"><!--ciudad-->
+            <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="person_pin_circle"></mat-icon>
+            <span>15010 - A Coruña</span>
+        </div>
+
+      </div>
+
+      </div>
     </mat-toolbar>
     <!-- Add Content Here -->
     <div class="content">

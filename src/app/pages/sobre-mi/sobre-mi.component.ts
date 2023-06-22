@@ -59,8 +59,7 @@ export class SobreMiComponent implements OnInit {
 
     if (!sessionStorage.getItem('token')) {
       alert('Esta página está en desarrollo, se puede visualizar el contenido y ' +
-        'la información pero faltan los trabajos de diseño para que la visualización sea atractiva\n' +
-        'Para visualizarla en un teléfono móvil, de momento se debe poner el teléfono en horizontal\n' +
+        'la información pero faltan los trabajos de diseño para que la visualización sea atractiva\n'+
         ' Por favor, clicka en el botón de aceptar para continuar');
       sessionStorage.setItem('token', 'abc123')
     }

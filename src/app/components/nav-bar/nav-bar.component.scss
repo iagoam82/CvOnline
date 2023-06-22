@@ -21,3 +21,35 @@
 .navBar-color{
   background-color:rgb(186, 58, 190);
 }
+.rrss{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.qr{
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 2rem;
+}
+.lineal{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+}
+.flexYcenter{
+  display: flex;
+  align-items: center;
+}
+.contenido-navegador{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.espacio{
+  padding-right: 0.5rem;
+}
+.espacioizq{
+  padding-left: 0.5rem;
+}
