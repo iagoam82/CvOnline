@@ -1,18 +1,15 @@
-
-<mat-sidenav-container class="sidenav-container" >
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar style="padding-top: 30px;"><img width="150px" src="assets/images/logoIago.png"></mat-toolbar>
     <mat-nav-list style="padding-top: 110px;">
       <div class="flexYcenter espacioizq">
         <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
         <a mat-list-item [routerLink]="['/']">Sobre mi</a>
-    </div>
-    <div class="flexYcenter espacioizq">
-      <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="school"></mat-icon>
-      <a mat-list-item [routerLink]="['/dashboard/formacion']">Formación</a>
+      </div>
+      <div class="flexYcenter espacioizq">
+        <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="school"></mat-icon>
+        <a mat-list-item [routerLink]="['/dashboard/formacion']">Formación</a>
       </div>
       <div class="flexYcenter espacioizq">
         <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="work"></mat-icon>
@@ -25,54 +22,85 @@
     </mat-nav-list>
     <div class="rrss">
       <div>
-        <img src="/assets/images/rrss/qr.png" class="qr"/>
+        <img src="/assets/images/rrss/qr.png" class="qr" />
       </div>
       <div class="lineal">
-        <a href="https://www.linkedin.com/in/iagoiam/"><img width="50rem"  src="/assets/images/rrss/linkedin.png"/></a>
-        <a href="https://github.com/iagoam82"><img width="70rem" src="/assets/images/rrss/github.png"/></a>
+        <a href="https://www.linkedin.com/in/iagoiam/"><img width="50rem" src="/assets/images/rrss/linkedin.png" /></a>
+        <a href="https://github.com/iagoam82"><img width="70rem" src="/assets/images/rrss/github.png" /></a>
       </div>
 
     </div>
   </mat-sidenav>
- 
+
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary" class="navBar-color">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
+
+    
+    <mat-toolbar color="primary" class="navBar-color" style="height: 10rem;">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
 
-      <div class="contenido-navegador">
 
-        <div><!-- teléfono y email -->
-          <div class="flexYcenter">
-            <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="phone_iphone"></mat-icon>
-            <span>673.549.799</span>
+      <div *ngIf="isMobile; else isPC">
+        <div class="contenido-movil">
+          <div><!-- teléfono y email -->
+            <div class="flexYcenter">
+              <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon"
+                fontIcon="phone_iphone"></mat-icon>
+              <span>673.549.799</span>
+            </div>
+            <div class="flexYcenter">
+              <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="mail"></mat-icon>
+              <a href="mailto:iagoiam82@gmail.com" style="color: white;"> iagoiam82@gmail.com</a>
+            </div>
           </div>
-          <div class="flexYcenter">
-            <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="mail"></mat-icon>
-            <a href="mailto:iagoiam82@gmail.com" style="color: white;"> iagoiam82@gmail.com</a>
-          </div>
-        </div>
-
-        <div><!--titulo-->
+          <div><!--titulo-->
             <h1>IAGO ALONSO MEIJIDE</h1>
+          </div>
+          <div>
+            <div class="flexYcenter"><!--ciudad-->
+              <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon"
+                fontIcon="person_pin_circle"></mat-icon>
+              <span>15010 - A Coruña</span>
+            </div>
+          </div>
         </div>
-
-        <div>
-          <div class="flexYcenter"><!--ciudad-->
-            <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="person_pin_circle"></mat-icon>
-            <span>15010 - A Coruña</span>
-        </div>
-
       </div>
 
-      </div>
+      <ng-template #isPC>
+        <div class="contenido-pc">
+          <div><!-- teléfono y email -->
+            <div class="flexYcenter">
+              <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon"
+                fontIcon="phone_iphone"></mat-icon>
+              <span>673.549.799</span>
+            </div>
+            <div class="flexYcenter">
+              <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon" fontIcon="mail"></mat-icon>
+              <a href="mailto:iagoiam82@gmail.com" style="color: white;"> iagoiam82@gmail.com</a>
+            </div>
+          </div>
+          <div><!--titulo-->
+            <h1>IAGO ALONSO MEIJIDE</h1>
+          </div>
+          <div>
+            <div class="flexYcenter"><!--ciudad-->
+              <mat-icon class="espacio" aria-hidden="false" aria-label="Example home icon"
+                fontIcon="person_pin_circle"></mat-icon>
+              <span>15010 - A Coruña</span>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+        
+
+        
+
+
+
+
     </mat-toolbar>
     <!-- Add Content Here -->
     <div class="content">

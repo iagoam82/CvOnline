@@ -16,6 +16,16 @@ export class NavBarComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  public isMobile: boolean = false;
+  constructor(private breakpointObserver: BreakpointObserver) {
+    breakpointObserver.observe([
+    Breakpoints.Handset
+  ]).subscribe(result=>{
+    this.isMobile=result.matches;
+      if(this.isMobile){
+        this.isMobile=true;
+      }
+  });
+  }
 
 }
