@@ -7,7 +7,7 @@ export const FORMACION_ACADEMICA: FormacionAcademica[] = [
         titulo:'Técnico Superior en Desarrollo de Aplicaciones Web',
         centro: 'IES Fernando Wirtz',
         fecha: 'Septiembre/2019 - Diciembre/2022',
-        descripcion: 'Módulos: Desarrollo web en entorno cliente, Desarrollo web en entorno servidor, Despliegue de aplicaciones web, Diseño de interfaces web, Diseño web, Empresa e iniciativa emprendedora, Formación y orientación laboral, Inglés técnico para grado superior, Lenguajes de marcas y sistemas de gestión de información, Proyecto de desarrollo de aplicaciones web, Sistemas de gestión empresarial, Formación en centros de trabajo',
+        descripcion: 'Módulos: Desarrollo web en entorno cliente, Desarrollo web en entorno servidor, Despliegue de aplicaciones web, Diseño de interfaces web, Diseño web, Empresa e iniciativa emprendedora, FCT',
         imagen: '/assets/images/wirtz.jpg'
     },
     {
