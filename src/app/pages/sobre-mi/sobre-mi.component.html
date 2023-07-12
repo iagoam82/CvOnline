@@ -23,13 +23,12 @@
             </div>
         </mat-grid-tile>
     </mat-grid-list>
-
+<hr>
     <!-- FILA DE ABAJO -->
-         <mat-grid-list [cols]="colSize2"  rowHeight="8rem">
-
+         <mat-grid-list [cols]="colSize2"  rowHeight="8rem" >
         <!-- Columna idiomas -->
         <mat-grid-tile [colspan]="1" [rowspan]="4" >
-            <div class="centrado">
+            <div class="centrado arriba" >
                 <h1>Idiomas</h1>
                 <table mat-table [dataSource]="listaIdiomas" class="mat-elevation-z8" >
                     <ng-container matColumnDef="imagen">
@@ -49,7 +48,7 @@
         
         <!-- Columna Tecnologías -->
         <mat-grid-tile [colspan]="1" [rowspan]="7">
-            <div class="centrado">
+            <div class="centrado arriba">
                 <h1>Tecnologías</h1>
                 <table mat-table [dataSource]="listaTecnologias" class="mat-elevation-z8">
                     <ng-container matColumnDef="imagen">
@@ -68,7 +67,7 @@
         </mat-grid-tile>
         <!-- Columna personalidad -->
         <mat-grid-tile [colspan]="1" [rowspan]="5">
-            <div class="centrado">
+            <div class="centrado arriba">
                 <h1>Personalidad</h1>
                 <table mat-table [dataSource]="listaCaracteristicas" class="mat-elevation-z8">
                     <ng-container matColumnDef="imagen">
